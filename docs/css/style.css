@@ -1,0 +1,124 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  animation: colours 10s linear infinite;
+}
+.bar {
+  width: 800px;
+  height: 200px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 40px;
+  position: relative;
+  animation: krutilkaSmerti2 5s linear infinite;
+}
+.circle {
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  background-color: tomato;
+  border-radius: 100%;
+  animation-play-state: running;
+  border: 6px solid rgb(224, 208, 208);
+}
+.circle41::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: cornsilk;
+  position: absolute;
+  top: 50%;
+  border-radius: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  animation: circle__in 4s linear infinite;
+}
+.circle41::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: cornsilk;
+  position: absolute;
+  top: 50%;
+  border-radius: 100%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  animation: circle__in 3s linear infinite;
+}
+.circle4 {
+  position: relative;
+  animation: krutilkaSmerti 40s ease-in-out infinite;
+}
+.circle3 {
+  animation: krutilkaSmerti 4.1s ease-in-out infinite;
+}
+
+@keyframes krutilkaSmerti2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes krutilkaSmerti {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: 0px;
+    left: 78%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes colours {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: rgb(41, 43, 41);
+  }
+  60% {
+    background-color: rgb(54, 49, 50);
+  }
+
+  100% {
+    background-color: black;
+  }
+}
+@keyframes circle__in {
+  0% {
+    top: 50%;
+    right: 50%;
+  }
+  10% {
+    top: 50%;
+    right: 0;
+  }
+  25% {
+    right: 50%;
+    top: 0;
+  }
+  50% {
+    top: 100%;
+    right: 50%;
+  }
+  75% {
+    right: 100%;
+    top: 50%;
+  }
+  100% {
+    top: 50%;
+    right: 50%;
+  }
+}
